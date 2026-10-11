@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: russki30-signature
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: python -m py_compile server.py
+    startCommand: python server.py
+    envVars:
+      - key: RUSSKI_HOST
+        value: 0.0.0.0
+      - key: RUSSKI_ACCESS_CODE
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
