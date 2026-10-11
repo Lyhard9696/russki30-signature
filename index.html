@@ -1,12 +1,22 @@
 <!doctype html>
 <html lang="fr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0d1728"><meta name="description" content="RUSSKI 30 ULTRA : apprendre le russe depuis le français, avec des séances guidées, révisions espacées, dialogues et expression orale.">
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Russki Ultra">
+<meta name="theme-color" content="#0d1728"><meta name="description" content="RUSSKI 30 SIGNATURE : apprendre le russe depuis le français, avec des séances guidées, révisions espacées, dialogues et expression orale.">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Russki Signature">
 <link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css">
 <title>RUSSKI 30 SIGNATURE — Ton russe, chaque jour</title>
 <script defer src="lessons.js"></script><script defer src="accents.js"></script><script defer src="extra.js"></script><script defer src="bonus.js"></script><script defer src="app.js"></script></head>
 <body><div class="lux-bg" aria-hidden="true"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div><div class="grid-glow"></div></div><div id="splash" class="splash"><div class="splash-card"><div class="splash-mark">Я</div><div class="splash-kicker">RUSSKI 30</div><h1>SIGNATURE</h1><p>L’apprentissage du russe, version premium.</p></div></div><div id="app"><aside id="sidebar" class="sidebar"></aside><div class="workspace"><header id="topbar" class="topbar"></header><main id="main" tabindex="-1"></main></div></div>
 <nav id="bottomnav" class="bottomnav" aria-label="Navigation mobile"></nav>
 <div id="toast" class="toast" role="status" aria-live="polite"></div><input id="importFile" type="file" accept="application/json,.json" hidden>
-</body></html>
+<script>
+// Secours si un script ne charge pas : ne jamais laisser l'écran d'introduction bloqué.
+setTimeout(function(){
+  var intro=document.getElementById('splash');
+  if(intro){intro.classList.add('hide');setTimeout(function(){if(intro.parentNode)intro.remove()},850)}
+  var main=document.getElementById('main');
+  if(main && !main.children.length){
+    main.innerHTML='<section style="padding:30px 16px;color:#f6fbff"><h1>Chargement interrompu</h1><p>Les fichiers de l’application ne se sont pas chargés. Vérifie la connexion Internet et réessaie.</p><a href="/" style="color:#aafadd">Réessayer l’ouverture ↗</a></section>';
+  }
+},4500);
+</script></body></html>

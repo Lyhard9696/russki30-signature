@@ -2,7 +2,7 @@
   "name": "RUSSKI 30 SIGNATURE",
   "short_name": "Russki Signature",
   "description": "Le russe, expliqué en français. Parcours intensif de 30 jours.",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0d1728",
